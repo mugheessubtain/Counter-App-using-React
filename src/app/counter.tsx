@@ -7,7 +7,7 @@ type CountType={
 
 export default function Counter({ message }:CountType) {
     const [user, setUser] = useState("");
-    const [count, setCount] = useState("");
+    const [count, setCount] = useState<any>("");
     const [finalValue, setFinalValue] = useState(0)
     const addHandler = () => {
         setFinalValue(Number(count) + Number(finalValue))
@@ -16,7 +16,7 @@ export default function Counter({ message }:CountType) {
         setFinalValue(Number(finalValue) - Number(count))
     }
     const resetHandler = () => {
-        setFinalValue(count)
+        setFinalValue(0)
     }
     return (
         <>
